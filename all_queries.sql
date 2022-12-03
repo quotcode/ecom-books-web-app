@@ -57,3 +57,40 @@ values ("The Young Guy", "Shivam Yadav", 234, "['Teenage','PeerPressure']", 1346
 insert into books_universe.books_info (BookName, BookAuthor, BookPages, BookGeneres, BookPrice, BookRating)
 values ("The Amazing South Sudan", "Shivam Yadav", 398, "['Country','Patriotism']", 188.94, 4 );
 
+
+------------- JSON DATA FOR RESTAPI
+
+[
+    {
+        "bookID": 10001,
+        "bookName": "The Pyschology of Money",
+        "bookAuthor": "Morgan Housel",
+        "bookPages": 0,
+        "bookGeneres": null,
+        "bookPrice": 239.45,
+        "bookRecordInsertTime": null,
+        "bookPublisher": null,
+        "bookRating": 0,
+        "bookEdition": 0,
+        "bookPublishedDate": null,
+        "bookCoverImgUrl": null,
+        "bookReviews": 0
+    },
+    {
+        "bookID": 10002,
+        "bookName": "Notting Hill",
+        "bookAuthor": "Shivam Yadav",
+        "bookPages": 0,
+        "bookGeneres": null,
+        "bookPrice": 899.05,
+        "bookRecordInsertTime": null,
+        "bookPublisher": null,
+        "bookRating": 0,
+        "bookEdition": 0,
+        "bookPublishedDate": null,
+        "bookCoverImgUrl": null,
+        "bookReviews": 0
+    }
+]
+
+-------------------

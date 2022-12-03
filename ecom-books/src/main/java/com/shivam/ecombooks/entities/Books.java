@@ -1,6 +1,12 @@
 package com.shivam.ecombooks.entities;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Books {
+	
+	@Id
 	private long bookID;
 	private String bookName;	
 	private String bookAuthor;
@@ -15,6 +21,8 @@ public class Books {
 	private String bookCoverImgUrl;
 	private long bookReviews;
 	
+	//default constructor for Books required for JPA
+	public Books() {}
 	
 	public Books(long bookID, String bookName, String bookAuthor, double bookPrice) {
 		super();
