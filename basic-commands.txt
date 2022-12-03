@@ -1,0 +1,10 @@
+# Java
+-- to do maven clean install and sprinboot app run at one go
+mb && r           
+
+
+
+# Keyboard shortcuts
+-- to enable column selection in eclipse and notepad ++
+ALT + SHIFT + A
+
