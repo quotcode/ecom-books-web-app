@@ -2,8 +2,6 @@ import React from 'react'
 import '../css/BooksCatalog.css'
 import {AiFillStar} from "react-icons/ai";
 import {AiOutlineStar} from "react-icons/ai";
-import {GrAdd} from "react-icons/gr";
-import {FaRegHeart} from "react-icons/fa";
 
 const BooksCatalog = ({
     catalogCardImg,

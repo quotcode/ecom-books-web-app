@@ -1,7 +1,6 @@
 import React from 'react'
 import '../css/VerticalCard.css'
 import {AiFillStar} from "react-icons/ai";
-import {AiOutlineStar} from "react-icons/ai";
 const VerticalItemCard = ({cardImage, bookTitle, bookAuthor, bookRating, bookReviews}) => {
     return (
 
@@ -23,7 +22,7 @@ const VerticalItemCard = ({cardImage, bookTitle, bookAuthor, bookRating, bookRev
                     <div className='col-1'><AiFillStar/></div>
                     <div className='col-1'><AiFillStar/></div>
                     <div className='col-1'><AiFillStar/></div>
-                    {/* <div className='col-1'><AiOutlineStar/></div> */}
+                    
                 </div>
 
                 <a href="#" className="btn btn-outline-dark">
