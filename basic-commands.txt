@@ -8,3 +8,9 @@ mb && r
 -- to enable column selection in eclipse and notepad ++
 ALT + SHIFT + A
 
+-- to indent in Visual Studio Code
+CTRL + B
+
+-- to automatically get template for functional component of react
+step1: type   "rafce" 
+step2: hit enter
