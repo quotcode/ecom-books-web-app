@@ -2,3 +2,9 @@
 
 # dependencies
 /node_modules
+
+/ecom-books/.metadata/.plugins/org.eclipse.core.resources/.root/3.tree
+/ecom-books/.metadata/.plugins/org.eclipse.core.resources/.root/4.tree
+/ecom-books/.metadata/version.ini
+/ecom-books/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi
+/ecom-books/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources

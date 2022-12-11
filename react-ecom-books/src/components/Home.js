@@ -11,22 +11,26 @@ import '../css/Home.css'
 import VerticalItemCard from '../components/VerticalItemCard'
 import BooksCatalogue from '../components/BooksCatalog'
 
-import toast, {Toaster} from 'react-hot-toast';
-import axios, {Axios} from 'axios';
+import toast from 'react-hot-toast';
+import axios from 'axios';
 import {useEffect, useState} from 'react';
 import base_url from "./../api/springbootAPI";
+import {Link} from 'react-router-dom'
 
 const Home = ({name}) => {
-    const [books,
-        setBooks] = useState([]);
+    // Array of objects
+    const [books,setBooks] = useState([]);
+    
+    // // Book Object for above array of books
+    // const [book, setBook] = useState({});
 
+    // Start: Fetching all the books data through Spring Boot Rest API
     const getAllBooksFromSpringBootRestAPI = () => {
         axios
             .get(`${base_url}/all-books`)
             .then(
             // if success
             (response) => {
-                console.log(response);
                 console.log("-----------your data is loaded----------", response.data);
                 setBooks(response.data);
                 toast.success("your data has been loaded!")
@@ -41,6 +45,25 @@ const Home = ({name}) => {
     useEffect(() => {
         getAllBooksFromSpringBootRestAPI();
     }, []);
+
+    // End: Fetching all the books data through Spring Boot Rest API
+
+    // Function that display individual book data
+    const displayAllBookData = books.map((b) => {
+        return (
+            <div>
+                <BooksCatalogue
+                    catalogCardImg={cardImg7}
+                    bookId={b.bookId}
+                    bookTitle={b.bookName}
+                    bookAuthor={b.bookAuthor}
+                    bookRating={b.bookRating}   //rating: long integer
+                    bookReviews={b.bookReviews} //review: double out of 5
+                    bookPublishedOn={b.bookPublishedDate}
+                    bookPrice={b.bookPrice}/>
+            </div>
+        );
+    });
 
     const shopNowNotify = () => toast('Coming soon!', {duration: 800});
     return (
@@ -89,68 +112,68 @@ const Home = ({name}) => {
                 <div className='catalog-menu col-3 my-2'>
                     <div className="list-group">
 
-                        <a
-                            href="#"
+                        <Link
+                            to="/"
                             className="list-group-item list-group-item-action"
                             aria-current="true">
                             <div className="m-3">
                                 <h5 className="row">{"Categories"}</h5>
-                                <a className="catalog-menu-a-item row">{"Health & Fitness"}</a>
-                                <a className="catalog-menu-a-item row">{"Food"}</a>
-                                <a className="catalog-menu-a-item row">{"Self Development"}</a>
-                                <a className="catalog-menu-a-item row">{"Romance & Love"}</a>
-                                <a className="catalog-menu-a-item row">{"Humour"}</a>
+                                <Link className="catalog-menu-a-item row">{"Health & Fitness"}</Link>
+                                <Link className="catalog-menu-a-item row">{"Food"}</Link>
+                                <Link className="catalog-menu-a-item row">{"Self Development"}</Link>
+                                <Link className="catalog-menu-a-item row">{"Romance & Love"}</Link>
+                                <Link className="catalog-menu-a-item row">{"Humour"}</Link>
                             </div>
-                        </a>
+                        </Link>
 
-                        <a
-                            href="#"
+                        <Link
+                            to="/"
                             className="list-group-item list-group-item-action"
                             aria-current="true">
                             <div className="m-3">
                                 <h5 className="row">{"Authors"}</h5>
-                                <a className="catalog-menu-a-item row">{"Sort A-Z"}</a>
-                                <a className="catalog-menu-a-item row">{"Sort Z-A"}</a>
-                                <a className="catalog-menu-a-item row">{"Trending Authors"}</a>
+                                <Link className="catalog-menu-a-item row">{"Sort A-Z"}</Link>
+                                <Link className="catalog-menu-a-item row">{"Sort Z-A"}</Link>
+                                <Link className="catalog-menu-a-item row">{"Trending Authors"}</Link>
                             </div>
-                        </a>
+                        </Link>
 
-                        <a
-                            href="#"
+                        <Link
+                            to="/"
                             className="list-group-item list-group-item-action"
                             aria-current="true">
                             <div className="m-3">
                                 <h5 className="row">{"Price"}</h5>
-                                <a className="catalog-menu-a-item row">{"Below Rs.200"}</a>
-                                <a className="catalog-menu-a-item row">{"Between Rs.200 to Rs.500"}</a>
-                                <a className="catalog-menu-a-item row">{"Above Rs.500"}</a>
+                                <Link className="catalog-menu-a-item row">{"Below Rs.200"}</Link>
+                                <Link className="catalog-menu-a-item row">{"Between Rs.200 to Rs.500"}</Link>
+                                <Link className="catalog-menu-a-item row">{"Above Rs.500"}</Link>
                             </div>
 
-                        </a>
+                        </Link>
 
-                        <a
-                            href="#"
+                        <Link
+                            to="/"
                             className="list-group-item list-group-item-action"
                             aria-current="true">
                             <div className="m-3">
                                 <h5 className="row">{"Ratings"}</h5>
-                                <a className="catalog-menu-a-item row">{"5 Star"}</a>
-                                <a className="catalog-menu-a-item row">{"4 Star"}</a>
-                                <a className="catalog-menu-a-item row">{"3 & below"}</a>
+                                <Link className="catalog-menu-a-item row">{"5 Star"}</Link>
+                                <Link className="catalog-menu-a-item row">{"4 Star"}</Link>
+                                <Link className="catalog-menu-a-item row">{"3 & below"}</Link>
                             </div>
-                        </a>
+                        </Link>
 
-                        <a
-                            href="#"
+                        <Link
+                            to="/"
                             className="list-group-item list-group-item-action"
                             aria-current="true">
                             <div className="m-3">
                                 <h5 className="row">{"Published on"}</h5>
-                                <a className="catalog-menu-a-item row">{"this month"}</a>
-                                <a className="catalog-menu-a-item row">{"this year"}</a>
-                                <a className="catalog-menu-a-item row">{"older"}</a>
+                                <Link className="catalog-menu-a-item row">{"this month"}</Link>
+                                <Link className="catalog-menu-a-item row">{"this year"}</Link>
+                                <Link className="catalog-menu-a-item row">{"older"}</Link>
                             </div>
-                        </a>
+                        </Link>
 
                     </div>
 
@@ -164,20 +187,8 @@ const Home = ({name}) => {
                             <br></br>based on your current mood & readings.
                         </p>
                     </div>
-                    <div className="catalog-contents">
-
-                        {books.length > 0
-                            ? books.map((content) => <BooksCatalogue bookTitle={content}/>)
-                            : <h1>Nothing to show</h1>}
-                        <BooksCatalogue
-                            catalogCardImg={cardImg7}
-                            bookTitle={"bookTitle"}
-                            bookAuthor={"bookAuthor"}
-                            bookRating={"bookRating"}
-                            bookReviews={"bookReviews"}
-                            bookPublishedOn={"bookPublishedOn"}
-                            bookDesc={"bookDesc"}
-                            bookPrice={"bookPrice"}/> {/* <h1>Nothing to show</h1> */}
+                    <div className="catalog-contents" key="all-books">
+                        {displayAllBookData}
                     </div>
                 </div>
 

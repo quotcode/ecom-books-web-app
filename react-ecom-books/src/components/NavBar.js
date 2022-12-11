@@ -3,14 +3,12 @@ import "../css/NavBar.css"
 
 import {Link} from 'react-router-dom';
 
-import {BsPerson} from 'react-icons/bs'
+import {BsPerson, BsSearch} from 'react-icons/bs'
 import {AiOutlineGift} from 'react-icons/ai'
 import {AiFillHeart} from 'react-icons/ai'
 import {BsFillBagCheckFill} from 'react-icons/bs'
 import {FiLogOut} from 'react-icons/fi'
 import {TbStack2} from 'react-icons/tb'
-import Home from './Home';
-import BooksCatalog from './BooksCatalog';
 
 const NavBar = () => {
     return (
@@ -27,9 +25,12 @@ const NavBar = () => {
                                     type="search"
                                     placeholder="Search books by title, author, publisher, or your fav generes"
                                     aria-label="Search"/>
-                                <button className="btn btn-outline-secondary" type="submit">
-                                    Search
-                                </button>
+                                <div className="m-2" type="submit">
+                                    <span><BsSearch
+                                            style={{
+                                            fontSize: '20px'
+                                        }}/></span>
+                                </div>
                             </form>
                         </div>
                         <div className="navbar-end-items col-5">
@@ -49,34 +50,34 @@ const NavBar = () => {
                                     </button>
                                     <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                                         <li>
-                                            <a className="dropdown-item" href="#">
+                                            <Link className="dropdown-item" to="/">
                                                 Rewards
                                                 <span><AiOutlineGift/></span>
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li>
-                                            <a className="dropdown-item" href="#">
+                                            <Link className="dropdown-item" to="/">
                                                 Your wishlist
                                                 <span><AiFillHeart/></span>
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li>
-                                            <a className="dropdown-item" href="#">
+                                            <Link className="dropdown-item" to="/">
                                                 Orders
                                                 <span><BsFillBagCheckFill/></span>
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li>
-                                            <a className="dropdown-item" href="#">
+                                            <Link className="dropdown-item" to="/">
                                                 Transactions
                                                 <span><TbStack2/></span>
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li>
-                                            <a className="dropdown-item" href="#">
+                                            <Link className="dropdown-item" to="/">
                                                 Logout
                                                 <span><FiLogOut/></span>
-                                            </a>
+                                            </Link>
                                         </li>
                                     </ul>
                                 </div>
@@ -93,29 +94,29 @@ const NavBar = () => {
                                     </button>
                                     <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                                         <li>
-                                            <a className="dropdown-item" href="#">
+                                            <Link className="dropdown-item" to="/">
                                                 English
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li>
-                                            <a className="dropdown-item" href="#">
+                                            <Link className="dropdown-item" to="/">
                                                 Hindi
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li>
-                                            <a className="dropdown-item" href="#">
+                                            <Link className="dropdown-item" to="/">
                                                 Marathi
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li>
-                                            <a className="dropdown-item" href="#">
+                                            <Link className="dropdown-item" to="/">
                                                 Spanish
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li>
-                                            <a className="dropdown-item" href="#">
+                                            <Link className="dropdown-item" to="/">
                                                 Tamil
-                                            </a>
+                                            </Link>
                                         </li>
                                     </ul>
                                 </div>

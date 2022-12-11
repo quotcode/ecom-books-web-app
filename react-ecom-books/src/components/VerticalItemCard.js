@@ -1,6 +1,7 @@
 import React from 'react'
 import '../css/VerticalCard.css'
 import {AiFillStar} from "react-icons/ai";
+import {Link} from "react-router-dom";
 const VerticalItemCard = ({cardImage, bookTitle, bookAuthor, bookRating, bookReviews}) => {
     return (
 
@@ -25,9 +26,9 @@ const VerticalItemCard = ({cardImage, bookTitle, bookAuthor, bookRating, bookRev
                     
                 </div>
 
-                <a href="#" className="btn btn-outline-dark">
+                <Link to="/" className="btn btn-outline-dark">
                     View
-                </a>
+                </Link>
             </div>
         </div>
     )

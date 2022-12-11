@@ -1,8 +1,10 @@
 
 .nav-container{
     margin-top: 1%;
+    margin-bottom: 1%;
 }
 
 .navbar-item :hover{
-    background-color: none;
+    text-decoration: none;
+    text-decoration-line: none;
 }
