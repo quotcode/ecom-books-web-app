@@ -11,12 +11,13 @@ import {FiLogOut} from 'react-icons/fi'
 import {TbStack2} from 'react-icons/tb'
 
 const NavBar = () => {
+    
     return (
             <div>
                 <nav className="nav-container container">
                     <div className="row">
                         <div className="col-1 my-1">
-                            <Link to="/" className="navbar-item">Booksy</Link>
+                            <Link to="/" className="navbar-item logo">Booksy</Link>
                         </div>
                         <div className="col-6">
                             <form className="d-flex">
@@ -52,37 +53,42 @@ const NavBar = () => {
                                         <li>
                                             <Link className="dropdown-item" to="/">
                                                 Rewards
+                                                <span>{" | "}</span>
                                                 <span><AiOutlineGift/></span>
                                             </Link>
                                         </li>
                                         <li>
                                             <Link className="dropdown-item" to="/">
                                                 Your wishlist
+                                                <span>{" | "}</span>
                                                 <span><AiFillHeart/></span>
                                             </Link>
                                         </li>
                                         <li>
                                             <Link className="dropdown-item" to="/">
                                                 Orders
+                                                <span>{" | "}</span>
                                                 <span><BsFillBagCheckFill/></span>
                                             </Link>
                                         </li>
                                         <li>
                                             <Link className="dropdown-item" to="/">
                                                 Transactions
+                                                <span>{" | "}</span>
                                                 <span><TbStack2/></span>
                                             </Link>
                                         </li>
                                         <li>
                                             <Link className="dropdown-item" to="/">
                                                 Logout
+                                                <span>{" | "}</span>
                                                 <span><FiLogOut/></span>
                                             </Link>
                                         </li>
                                     </ul>
                                 </div>
 
-                                <button className="btn btn-light navbar-item col-sm-2 me-1">Sign in</button>
+                                <Link className="btn btn-light navbar-item col-sm-2 me-1" to="/signup">Sign up</Link>
                                 <div className="navbar-item me-1 dropdown">
                                     <button
                                         className="btn btn-light dropdown-toggle"
@@ -92,8 +98,8 @@ const NavBar = () => {
                                         aria-expanded="false">
                                         EN
                                     </button>
-                                    <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                        <li>
+                                    <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1" id="google_translate_element">
+                                        {/* <li>
                                             <Link className="dropdown-item" to="/">
                                                 English
                                             </Link>
@@ -117,7 +123,7 @@ const NavBar = () => {
                                             <Link className="dropdown-item" to="/">
                                                 Tamil
                                             </Link>
-                                        </li>
+                                        </li> */}
                                     </ul>
                                 </div>
 

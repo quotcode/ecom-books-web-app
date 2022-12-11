@@ -1,21 +1,9 @@
-import React from 'react';
-
-import toast, { Toaster } from 'react-hot-toast';
+import React, {useState} from 'react';
 function Demo(){
 
-    const showMsg = () => {
-        return toast.success("Hi shivam");
-    }
-
     return (
-        <div>
-            Demo
-            <button className="btn btn-success" onClick={showMsg}>Click Me</button>
-            <div>
-                <Toaster />
-            </div>
-        </div>
+        <div>Hello Demo</div>
     )
 }
 
-export default Demo
+export {Demo};

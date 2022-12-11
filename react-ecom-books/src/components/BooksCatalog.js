@@ -49,11 +49,7 @@ const BooksCatalog = ({
                             </p>
                             <div className='row col-sm-12'>
                                 <div className='col-sm-6 d-flex'>
-                                    {/* <div className='col-sm-1'><AiFillStar/></div>
-                                    <div className='col-sm-1'><AiFillStar/></div>
-                                    <div className='col-sm-1'><AiFillStar/></div>
-                                    <div className='col-sm-1'><AiFillStar/></div>
-                                    <div className='col-sm-1'><AiFillStar/></div> */}
+                                    
                                     {[...Array(bookRating)].map((star) => {
                                         return (
                                             <div className='col-sm-1'><AiFillStar/></div>

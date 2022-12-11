@@ -8,3 +8,9 @@
     text-decoration: none;
     text-decoration-line: none;
 }
+.logo{
+    text-decoration: none;
+    color: black;
+    font-size: larger;
+    font-family:cursive;
+}

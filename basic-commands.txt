@@ -24,5 +24,4 @@ step2: hit enter
                                     bookRating={key="bookRating"?item[key]:"NA"}
                                     bookReviews={key="bookReviews"?item[key]:"NA"}
                                     bookPublishedOn={key="bookPublishedDate"?item[key]:"NA"}
-                                    bookDesc={key=="bookAuthor"?item[key]:"NA"}
                                     bookPrice={key=="bookPrice"?item[key]:"NA"}/>

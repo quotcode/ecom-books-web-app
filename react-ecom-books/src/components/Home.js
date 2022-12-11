@@ -33,12 +33,12 @@ const Home = ({name}) => {
             (response) => {
                 console.log("-----------your data is loaded----------", response.data);
                 setBooks(response.data);
-                toast.success("your data has been loaded!")
+                // toast.success("your data has been loaded!")
             },
             // if failure
             (error) => {
                 console.log(error);
-                toast.error("Sorry :( , your data couldn't be loaded!")
+                // toast.error("Sorry :( , your data couldn't be loaded!")
             })
     }
 

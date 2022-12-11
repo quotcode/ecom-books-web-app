@@ -1,0 +1,12 @@
+.login-container{
+    border: 1px solid black;
+    margin: 2% 9% 2% 9%;
+    padding: 5%;
+}
+
+.login-phone{
+    max-width: 40%;
+}
+.login-pass{
+max-width: 40%;
+}
